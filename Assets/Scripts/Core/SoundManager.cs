@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -6,10 +7,17 @@ public class SoundManager : MonoBehaviour
     public AudioSource soundSource;
     public AudioSource musicSource;
 
+    public float fadingTimer;
+
+    public bool fading { get; private set; }
+    private float fadingTime;
+
     private void Awake()
     {
         soundSource = GetComponent<AudioSource>();
         musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+
+        fadingTime = fadingTimer;
 
         //Keep this object even when we go to new scene
         if (instance == null)
@@ -25,6 +33,30 @@ public class SoundManager : MonoBehaviour
         ChangeMusicVolume(0);
         ChangeSoundVolume(0);
     }
+
+    private void Update()
+    {
+        if (fading)
+        {
+            if(fadingTime> 0) 
+            {
+                fadingTime -= Time.deltaTime;
+                ChangeMusicVolume(fadingTime / fadingTimer);
+            }
+            if (fadingTime <= 0)
+            {
+                ChangeMusicVolume(0f);
+                fading = false;
+                fadingTime = fadingTimer;
+            }
+        }
+    }
+
+    public void ActivateFade()
+    {
+        fading = true;
+    }
+
     public void PlaySound(AudioClip _sound)
     {
         soundSource.PlayOneShot(_sound);
@@ -58,4 +90,5 @@ public class SoundManager : MonoBehaviour
         //Save final value to player prefs
         PlayerPrefs.SetFloat(volumeName, currentVolume);
     }
+
 }
