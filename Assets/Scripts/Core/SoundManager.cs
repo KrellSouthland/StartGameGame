@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -22,9 +23,12 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
 
         //Assign initial volumes
-        ChangeMusicVolume(0);
+        ChangeMusicVolume(1f);
         ChangeSoundVolume(0);
     }
+
+
+
     public void PlaySound(AudioClip _sound)
     {
         soundSource.PlayOneShot(_sound);
@@ -47,9 +51,9 @@ public class SoundManager : MonoBehaviour
 
         //Check if we reached the maximum or minimum value
         if (currentVolume > 1)
-            currentVolume = 0;
-        else if (currentVolume < 0)
             currentVolume = 1;
+        else if (currentVolume < 0)
+            currentVolume = 0;
 
         //Assign final value
         float finalVolume = currentVolume * baseVolume;
@@ -58,4 +62,5 @@ public class SoundManager : MonoBehaviour
         //Save final value to player prefs
         PlayerPrefs.SetFloat(volumeName, currentVolume);
     }
+
 }
