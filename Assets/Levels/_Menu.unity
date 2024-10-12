@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: FadingTimer
       value: 1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2256777875250995041, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: LevelMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 06bbee867c4cda34c9a65ca6a3f86b10, type: 3}
+    - target: {fileID: 2256777875250995041, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: LevelMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9eb5387fd7a82504888e410408be891f, type: 3}
     - target: {fileID: 5629641246316839571, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -358,7 +366,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9edb52c73d5467c4f8c97117e65a7bab, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -510,7 +518,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9edb52c73d5467c4f8c97117e65a7bab, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -701,7 +709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0869b1e96aac6d34cb086976dc7af826, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcc9eed01925717428febc6a3d626049, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -973,7 +981,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9edb52c73d5467c4f8c97117e65a7bab, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1084,7 +1092,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: b693698b5938bcd45b7f64fbcf91723e, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1096,7 +1104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FOX GAME
+  m_Text: Olonkho
 --- !u!222 &1206011028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1365,7 +1373,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9edb52c73d5467c4f8c97117e65a7bab, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1637,7 +1645,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a92fa17a9ff7f66469c4a554300b698d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9edb52c73d5467c4f8c97117e65a7bab, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1

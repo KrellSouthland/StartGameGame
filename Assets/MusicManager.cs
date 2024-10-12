@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
 
     public void SetCurrentLevelTrack()
     {
-        SoundManager.instance.musicSource.clip = LevelMusic[PlayerPrefs.GetInt("currentLevel", 0)];
+        SoundManager.instance.musicSource.clip = LevelMusic[PlayerPrefs.GetInt("currentLevel", 1)];
     }
 
         private void ChangeMusic(AudioClip nextMusic)
