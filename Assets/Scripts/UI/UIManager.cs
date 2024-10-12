@@ -84,6 +84,7 @@ public class UIManager : MonoBehaviour
     public void StartGame(int level = 1)
     {
         GameDataManager.ResetData();
+        MusicManager.instance.ActivateMiddleMusic(level);
         SceneManager.LoadScene(level);
     }
 
