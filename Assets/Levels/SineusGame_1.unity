@@ -446,6 +446,8 @@ GameObject:
   m_Component:
   - component: {fileID: 265164484}
   - component: {fileID: 265164485}
+  - component: {fileID: 265164486}
+  - component: {fileID: 265164487}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -478,6 +480,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b23677cb009b854b8370ce356b90ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &265164486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265164483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4562ec07c85f0cd49ac7dade28018d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapsAndMobs: []
+--- !u!114 &265164487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265164483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc2e9eb7fa86314ba1187e4e830b3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &299054082 stripped
@@ -702,11 +729,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1077860569623556391, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256777875250995041, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: FadingTimer
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256777875250995041, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: LevelMusic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256777875250995041, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: LevelMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 06bbee867c4cda34c9a65ca6a3f86b10, type: 3}
+    - target: {fileID: 2967250048594393272, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
+      propertyPath: fadingTimer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3863675871291642342, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
       propertyPath: m_Volume
-      value: 0.096
+      value: 0.318
       objectReference: {fileID: 0}
     - target: {fileID: 3863675871291642342, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
       propertyPath: m_audioClip
@@ -759,10 +802,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5629641246316839571, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 720805882}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
 --- !u!1 &713070026
 GameObject:
@@ -841,23 +881,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9172745, y: 26.990564}
   m_EdgeRadius: 0
---- !u!1 &720805878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5629641246316839571, guid: 84766614c7a5cc24c9b700d928a668fa, type: 3}
-  m_PrefabInstance: {fileID: 694636092}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &720805882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720805878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4311f2dfa49c18f4cbfe1daa82335c82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &750966334
 GameObject:
   m_ObjectHideFlags: 0

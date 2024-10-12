@@ -7,17 +7,10 @@ public class SoundManager : MonoBehaviour
     public AudioSource soundSource;
     public AudioSource musicSource;
 
-    public float fadingTimer;
-
-    public bool fading { get; private set; }
-    private float fadingTime;
-
     private void Awake()
     {
         soundSource = GetComponent<AudioSource>();
         musicSource = transform.GetChild(0).GetComponent<AudioSource>();
-
-        fadingTime = fadingTimer;
 
         //Keep this object even when we go to new scene
         if (instance == null)
@@ -30,32 +23,11 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
 
         //Assign initial volumes
-        ChangeMusicVolume(0);
+        ChangeMusicVolume(1f);
         ChangeSoundVolume(0);
     }
 
-    private void Update()
-    {
-        if (fading)
-        {
-            if(fadingTime> 0) 
-            {
-                fadingTime -= Time.deltaTime;
-                ChangeMusicVolume(fadingTime / fadingTimer);
-            }
-            if (fadingTime <= 0)
-            {
-                ChangeMusicVolume(0f);
-                fading = false;
-                fadingTime = fadingTimer;
-            }
-        }
-    }
 
-    public void ActivateFade()
-    {
-        fading = true;
-    }
 
     public void PlaySound(AudioClip _sound)
     {
@@ -79,9 +51,9 @@ public class SoundManager : MonoBehaviour
 
         //Check if we reached the maximum or minimum value
         if (currentVolume > 1)
-            currentVolume = 0;
-        else if (currentVolume < 0)
             currentVolume = 1;
+        else if (currentVolume < 0)
+            currentVolume = 0;
 
         //Assign final value
         float finalVolume = currentVolume * baseVolume;
