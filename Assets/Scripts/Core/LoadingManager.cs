@@ -38,12 +38,12 @@ public class LoadingManager : MonoBehaviour
     public void LoadDefineLevel(int level)
     {
         Debug.Log("Load Define Level");
-        //animator.SetBool("FadeIn", true);
+        animator.SetBool("FadeIn", true);
         currentLevel = level;
     }
+  
     public void LoadTheSceneEvent()
-    {
-        Debug.Log("LoadTheSceneEvent");
+    { 
         SceneManager.LoadScene(currentLevel); 
     }
 
