@@ -11,7 +11,9 @@ public class EnemyMovement : MonoBehaviour
     private Transform nextTarget;
 
     [Header("Movement parameters")]
-    [SerializeField] private float speed;
+    [SerializeField] private float maxspeed;
+    private float nullSpeed = 0f;
+    private float speed;
 
     [Header("Idle Behaviour")]
     [SerializeField] private float idleDuration;
@@ -27,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
         targets[0] = leftEdge;
         targets[1] = rightEdge;
         nextTarget = targets[0];
+        SpeedUp();
     }
 
     public void MoveToTarget(Transform target)
@@ -61,4 +64,14 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+
+    public void NulifySpeed()
+    {
+        speed = nullSpeed;
+    }
+
+    public void SpeedUp()
+    {
+        speed = maxspeed;
+    }
 }

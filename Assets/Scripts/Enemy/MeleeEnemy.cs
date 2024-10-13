@@ -18,12 +18,12 @@ public class MeleeEnemy : MonoBehaviour
     // References
     private Animator anim;
     private Health playerHealth;
-    private EnemyPatrol enemyPatrol;
+    private EnemyMovement movement;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        movement = GetComponentInParent<EnemyMovement>();
     }
 
     private void Update()
@@ -33,6 +33,7 @@ public class MeleeEnemy : MonoBehaviour
         // Attack only when player in sight
         if (PlayerInSight())
         {
+            movement.NulifySpeed();
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
@@ -40,8 +41,6 @@ public class MeleeEnemy : MonoBehaviour
             }
         }
 
-        if (enemyPatrol != null)
-            enemyPatrol.canMove = !PlayerInSight();
     }
 
     private bool PlayerInSight()
@@ -53,6 +52,10 @@ public class MeleeEnemy : MonoBehaviour
         if (hit.collider != null)
         {
             playerHealth = hit.transform.GetComponent<Health>();
+        }
+        else
+        {
+            movement.SpeedUp();
         }
 
         return hit.collider != null;
@@ -73,8 +76,4 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    public void Root(float delay)
-    {
-        enemyPatrol.Root(delay);
-    }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121671540093947953}
   - component: {fileID: 891367748728583559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439 \u043C\u0438\u0440 \u0437\u0435\u043C\u043B\u044F.\u043A\u0440\u0430\u04391"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8077533513007730712}
   - component: {fileID: 2459141946648491409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3453899143966448636}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 662cb8f2bd3410744b0c542ea4bb2c91, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548430656169911705}
   - component: {fileID: 8736326774428853532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439 \u043C\u0438\u0440 \u0437\u0435\u043C\u043B\u044F,1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6537204286928479975}
   - component: {fileID: 5372096303930851537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439 \u043C\u0438\u0440 \u0437\u0435\u043C\u043B\u044F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329377075253670381}
   - component: {fileID: 9007283164826018085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439 \u043C\u0438\u0440 \u0437\u0435\u043C\u043B\u044F.\u043A\u0440\u0430\u0439
     \u043B"
   m_TagString: Untagged

@@ -63,7 +63,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 584435300502002360}
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: -1775712891
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2cfd3f1809e2c11449cc4c67ccbe4c55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82aaa4e1642e8e448a56b3c121192da9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,18 +155,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5266454, y: 0.16091871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.39, y: 5.29}
+    oldSize: {x: 8.09, y: 10}
     newSize: {x: 3.39, y: 5.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.39, y: 5.29}
+  m_Size: {x: 4.443291, y: 8.830211}
   m_EdgeRadius: 0
 --- !u!95 &7189219999640032672
 Animator:
@@ -213,7 +213,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   fireballSound: {fileID: 8300000, guid: ce900741c7bb01c438c18019a7bb0d8f, type: 3}
-  enemyPatrol: {fileID: 0}
 --- !u!114 &9108927388844553162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +231,10 @@ MonoBehaviour:
   numberOfFlashes: 0
   components: []
   invulnerable: 0
-  deathSound: {fileID: 8300000, guid: d11fcdc7d1e7c0c438e41699b9a57179, type: 3}
+  deathSound:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   hurtSound:
   - {fileID: 8300000, guid: ec9cadf5396a7f8499bc6c4ab9195152, type: 3}
   healthbar: {fileID: 7651965990526497618}
@@ -250,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftEdge: {fileID: 8285176728158454334}
   rightEdge: {fileID: 6702578369965021224}
-  speed: 5
+  maxspeed: 5
   idleDuration: 0
   anim: {fileID: 7189219999640032672}
 --- !u!1 &1837224982966245771
@@ -279,8 +281,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 87.1, y: 3.7517319, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3660693536394387567}
   - {fileID: 6217537650181347700}

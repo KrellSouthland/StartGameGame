@@ -37,13 +37,13 @@ public class PlayerMovement : MonoBehaviour
         // flip player when moving left-right
         if (horizontalInput > 0.01f)
         {
-            transform.localScale = Vector3.one;
+            transform.rotation = new Quaternion (0,0,0,0);
             turnedLeft = false;
         }
 
         if (horizontalInput < -0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.rotation = new Quaternion(0,180,0,0);
             turnedLeft = true;
         }
 
@@ -56,12 +56,12 @@ public class PlayerMovement : MonoBehaviour
         {
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
-            if (onWall() && !isGrounded())
+            /*if (onWall() && !isGrounded())
             {
                 body.gravityScale = 0;
                 body.velocity = Vector2.zero;
             }
-            else
+            else*/
                 body.gravityScale = 7;
             // ПРОВЕРКА ДИАЛОГА
             if (Input.GetKey(KeyCode.Space) && !DialogueSystem.isOpen())

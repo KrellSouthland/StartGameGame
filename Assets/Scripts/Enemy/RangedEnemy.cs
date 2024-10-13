@@ -18,6 +18,7 @@ public class RangedEnemy : MonoBehaviour
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
+    private EnemyMovement movement;
 
     [Header("Fireball Sound")]
     [SerializeField] private AudioClip fireballSound;
@@ -28,6 +29,7 @@ public class RangedEnemy : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        movement = GetComponent<EnemyMovement>();
     }
 
     private void Update()
@@ -37,6 +39,7 @@ public class RangedEnemy : MonoBehaviour
         //Attack only when player in sight
         if (PlayerInSight())
         {
+            movement.NulifySpeed();
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
@@ -76,7 +79,10 @@ public class RangedEnemy : MonoBehaviour
             Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
-
+        if(hit.collider!= null)
+        {
+            movement.SpeedUp();
+        }
         return hit.collider != null;
     }
 
