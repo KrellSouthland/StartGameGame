@@ -14,15 +14,14 @@ public class AttackEffect : MonoBehaviour
     [SerializeField] private bool feather;
     [SerializeField] private int jumpEffect;
     [SerializeField] private int fastEffect;
-    [SerializeField] private int timerimmortal;
-    [SerializeField] private float fastTimer;
-    [SerializeField] private float jumpTimer;
+    [SerializeField] private float effectTimer;
     [SerializeField] private Projectile attackProjectile;
     [SerializeField] private Quaker shaker;
     [SerializeField] private float ammountOfHeal;
     [SerializeField] private Health player;
     [SerializeField] private float CDTimer;
     [SerializeField] private bool onCD;
+    [SerializeField] private Sprite spellIcon;
 
     [SerializeField] private AudioClip[] CastSound;
 
@@ -59,7 +58,7 @@ public class AttackEffect : MonoBehaviour
             {
                 SoundHolder.Instance.PlaySound(SoundHolder.Instance.ShieldSpell);
                 StartCoroutine(Shield());
-                player.MakeImmortal(timerimmortal);
+                player.MakeImmortal(effectTimer);
             }
             else if (quaker)
             {
@@ -88,6 +87,7 @@ public class AttackEffect : MonoBehaviour
                 ammunition.Fire();
             }
             onCD = true;
+            BuffsImage.instance.ActivateBuff(spellIcon, CDTimer);
             StartCoroutine(CD());
         }
     }
@@ -95,7 +95,7 @@ public class AttackEffect : MonoBehaviour
     private IEnumerator Earthquake()
     {
         Debug.Log("CamShake");
-        yield return new WaitForSeconds(timerimmortal);
+        yield return new WaitForSeconds(effectTimer);
         Debug.Log("StopCam");
     }
 
@@ -115,7 +115,7 @@ public class AttackEffect : MonoBehaviour
     {
         player.GetComponent<PlayerMovement>().ChangeSpeed(fastEffect);
         castParticles.SetActive(true);
-        yield return new WaitForSeconds(fastTimer);
+        yield return new WaitForSeconds(effectTimer);
         player.GetComponent<PlayerMovement>().ChangeSpeed(-fastEffect);
         castParticles.SetActive(false);
     }
@@ -123,14 +123,14 @@ public class AttackEffect : MonoBehaviour
     private IEnumerator JumpEffect()
     {
         player.GetComponent<PlayerMovement>().ChangeJump(jumpEffect);
-        yield return new WaitForSeconds(jumpTimer);
+        yield return new WaitForSeconds(effectTimer);
         player.GetComponent<PlayerMovement>().ChangeJump(-jumpEffect);
     }
 
     private IEnumerator Shield()
     {
         castParticles.SetActive(true);
-        yield return new WaitForSeconds(timerimmortal);
+        yield return new WaitForSeconds(effectTimer);
         castParticles.SetActive(false);
     }
 

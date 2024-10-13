@@ -104,7 +104,7 @@ public class Health : MonoBehaviour
         invulnerable = false;
     }
 
-    private IEnumerator Immortality(int duration)
+    private IEnumerator Immortality(float duration)
     {
         invulnerable = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
@@ -144,7 +144,7 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10, 11, false);
     }
 
-    public void MakeImmortal(int duration)
+    public void MakeImmortal(float duration)
     {
         StartCoroutine(Immortality(duration));
     }
