@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9eb5387fd7a82504888e410408be891f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -417,9 +417,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadingTimer: 0
   LevelMusic:
-  - {fileID: 8300000, guid: 9eb5387fd7a82504888e410408be891f, type: 3}
-  - {fileID: 8300000, guid: 9eb5387fd7a82504888e410408be891f, type: 3}
-  - {fileID: 8300000, guid: 06bbee867c4cda34c9a65ca6a3f86b10, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
+  - {fileID: 8300000, guid: 3bfa45b6a94c8664ea02750cb49b0bf4, type: 3}
   tempSource: {fileID: 2138710125076340615}
 --- !u!1 &6564271936083983490
 GameObject:
@@ -468,9 +477,9 @@ MonoBehaviour:
   HealSpell:
   - {fileID: 8300000, guid: 38b9293ea0d2d3b4ebce5d3cbf58c5bb, type: 3}
   SpeedSpell:
-  - {fileID: 8300000, guid: 44b21bc84b9bccb4baf86d28b8dc7ff9, type: 3}
+  - {fileID: 8300000, guid: 2f72889e3c161314faa103e9c299f595, type: 3}
   JumpSpell:
-  - {fileID: 8300000, guid: 44b21bc84b9bccb4baf86d28b8dc7ff9, type: 3}
+  - {fileID: 8300000, guid: 09d9d70f1289f454daca57b7c37dedea, type: 3}
   ShieldSpell:
   - {fileID: 8300000, guid: 1ef8743c7bb7ce54ab2adcdcd6a72e23, type: 3}
   FireSpell:
@@ -479,10 +488,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ac10af5b9032b4042b83d1bcfba4d17e, type: 3}
   EarthQuakeSpell: []
   PlayerMove:
-  - {fileID: 8300000, guid: bc3199712bc97904c9e7a75ec994cd20, type: 3}
-  - {fileID: 8300000, guid: f9d5e7eef8e1f584f99910c82d22ab6d, type: 3}
-  - {fileID: 8300000, guid: 4905c4d7a75a74047abcc90133e98660, type: 3}
-  - {fileID: 8300000, guid: 687509d3302944b48852ba34a4d5d381, type: 3}
+  - {fileID: 8300000, guid: 9dd994e9d93922449a627413325582c5, type: 3}
+  - {fileID: 8300000, guid: 07230aabb4234fd4c92f940ef9715a66, type: 3}
+  - {fileID: 8300000, guid: 950e4ee5781b7644aa46d15794f7febe, type: 3}
+  - {fileID: 8300000, guid: b27796a6545546143ad839c5fc7baa7e, type: 3}
   PlayerLand: []
   PlayerHurt:
   - {fileID: 8300000, guid: 9ee1de5f532eda04ba4d2ec028d48ffd, type: 3}

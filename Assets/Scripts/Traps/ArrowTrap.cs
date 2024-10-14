@@ -7,6 +7,7 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private GameObject[] arrows;
     private int ammo;
     [SerializeField] private GameObject activeArrow;
+    [SerializeField] private float trapTimer;
     private float cooldownTimer;
     private bool trapActive;
     private bool nextArrow;
@@ -30,8 +31,12 @@ public class ArrowTrap : MonoBehaviour
         {
             if (nextArrow)
             {
-                Attack();
-                nextArrow = false;
+                cooldownTimer -= Time.deltaTime;
+                if (cooldownTimer <= 0)
+                {
+                    Attack();
+                    nextArrow = false;
+                }
             }
         }
     }
@@ -56,6 +61,7 @@ public class ArrowTrap : MonoBehaviour
     {
         ammo = arrows.Length - 1;
         activeArrow = arrows[ammo];
+        cooldownTimer = trapTimer;
     }
 
 
@@ -65,6 +71,8 @@ public class ArrowTrap : MonoBehaviour
     }
 
     public void NextArrow()
-        { nextArrow = true; }
+    { 
+        nextArrow = true;
+    }
 
 }

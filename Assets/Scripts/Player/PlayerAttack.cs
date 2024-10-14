@@ -12,12 +12,15 @@ public class PlayerAttack : MonoBehaviour
     private bool stopCasts;
     [SerializeField] private bool startAttack;
     [SerializeField] private bool dontAttack;
+    [SerializeField] private bool stucker;
     [SerializeField] private int currentAttackTick;
     [SerializeField]private List<int> currentAttackList;
     private Animator anim;
     private PlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
     [SerializeField] private float betweenCoolDown;
+    [SerializeField] private float stuckTimer;
+    private float stucking;
 
     [SerializeField] private ShowMagic spells;
 
@@ -30,21 +33,31 @@ public class PlayerAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        stucking = stuckTimer;
     }
 
     private void Update()
     {
         if(!DialogueSystem.isOpen())
-        if (!stopCasts&&!dontAttack)
+        if (!stopCasts)
         {
-            if (Input.GetMouseButtonDown(0))
+                if(stucker)
+                {
+                    stucking -= Time.deltaTime;
+                    if (stucking <=0)
+                    {
+                        stucker = false;
+                        stucking = stuckTimer;
+                    }
+                }
+            if (Input.GetMouseButtonDown(0)&&!stucker)
             {
                 spells.ActivateStage(0,currentAttackTick);
                 anim.SetTrigger("attack");
                 Attack(0);
                 SoundHolder.Instance.PlaySound(SoundHolder.Instance.SilentDrum);
             }
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && !stucker)
             {
                 spells.ActivateStage(1, currentAttackTick);
                 anim.SetTrigger("Strong Attack");
@@ -70,6 +83,7 @@ public class PlayerAttack : MonoBehaviour
         dontAttack = true;
         StartCoroutine(BetweenAttacks());
         currentAttackTick++;
+        stucker = true;
 
 
         if (currentAttackTick >= 3)

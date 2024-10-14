@@ -228,9 +228,11 @@ MonoBehaviour:
   attackTimer: 6
   startAttack: 0
   dontAttack: 0
+  stucker: 0
   currentAttackTick: 0
   currentAttackList: 
   betweenCoolDown: 1
+  stuckTimer: 0.55
   spells: {fileID: 3931416624099220817}
   silentSound: {fileID: 8300000, guid: 164df2458fdc8324ab297684e3ad7dcc, type: 3}
   StrongSound:

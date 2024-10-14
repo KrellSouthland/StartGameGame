@@ -39,13 +39,14 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        boxCollider.enabled = false;
-        anim.SetTrigger("explode");
+        
 
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<Health>().TakeDamage(Damage);
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("explode");
             //GetComponent<Health>()?.TakeDamage(Damage)
         }
     }
