@@ -66,13 +66,13 @@ public class Projectile : MonoBehaviour
 
     public virtual void Fire()
     {
-        int turnmodifier = 1;
-        if (FindObjectOfType<PlayerMovement>().turnedLeft)
+       int turnmodifier = 1;
+/*        if (FindObjectOfType<PlayerMovement>().turnedLeft)
         {
-            turnmodifier = -1;
-        }
-        transform.localScale = new Vector2(turnmodifier, transform.localScale.y);
-        rb.AddForce(transform.right*speed*turnmodifier);
+            turnmodifier = 1;
+        }*/
+        transform.localScale = new Vector2(turnmodifier*transform.localScale.x, transform.localScale.y);
+        rb.AddForce(transform.right*speed/**turnmodifier*/);
     }
 
 
