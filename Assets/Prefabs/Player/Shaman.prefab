@@ -467,7 +467,7 @@ PrefabInstance:
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 26a1fe7d03186c24d9b7ccd8d3624378, type: 3}
+      objectReference: {fileID: 21300000, guid: 00afaf9da55b72342a1578c974a36a78, type: 3}
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: jumpEffect
       value: 15
@@ -561,6 +561,10 @@ PrefabInstance:
       propertyPath: CastSound
       value: 
       objectReference: {fileID: 8300000, guid: 38b9293ea0d2d3b4ebce5d3cbf58c5bb, type: 3}
+    - target: {fileID: 1319382055454743917, guid: e9134ac443ca89c4d975daefae64156d, type: 3}
+      propertyPath: spellIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8040202e0d1ce2046a20cf2c7052295d, type: 3}
     - target: {fileID: 1319382055454743917, guid: e9134ac443ca89c4d975daefae64156d, type: 3}
       propertyPath: effectTimer
       value: 1
@@ -823,7 +827,7 @@ PrefabInstance:
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 5049313111852414691c328234acf569, type: 3}
+      objectReference: {fileID: 21300000, guid: 5ad4023c65bf3cb4dbab2cf221b6354b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1206,6 +1210,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: ac10af5b9032b4042b83d1bcfba4d17e, type: 3}
     - target: {fileID: 9116846809125343134, guid: c521a4ce7a105aa48b21bef42c56a685, type: 3}
+      propertyPath: spellIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: f008d0c3f4db2ce4785204081b795ad8, type: 3}
+    - target: {fileID: 9116846809125343134, guid: c521a4ce7a105aa48b21bef42c56a685, type: 3}
       propertyPath: attackProjectile
       value: 
       objectReference: {fileID: 5744787399789426537, guid: 05b12276b392b604085568c21794614f, type: 3}
@@ -1245,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 2006466338151262852, guid: 5bdf4d4a69d227e4c8d51c78def992e5, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 5d791d481dcfc294c96fea74843e14f7, type: 3}
+      objectReference: {fileID: 21300000, guid: cf352526388e74a4f9b5749a4d288567, type: 3}
     - target: {fileID: 2006466338151262852, guid: 5bdf4d4a69d227e4c8d51c78def992e5, type: 3}
       propertyPath: effectTimer
       value: 2
@@ -1525,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 580f7214c0eedcf4dabc057e8afe691a, type: 3}
+      objectReference: {fileID: 21300000, guid: f188d98ebd564b448b1959eabebc6883, type: 3}
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: fastEffect
       value: 5
