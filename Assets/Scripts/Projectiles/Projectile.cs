@@ -13,12 +13,11 @@ public class Projectile : MonoBehaviour
 
     public int slowEffect;
 
-    private Animator anim;
+    [SerializeField] private Animator anim;
     private BoxCollider2D boxCollider;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -46,7 +45,7 @@ public class Projectile : MonoBehaviour
             collision.GetComponent<Health>().TakeDamage(Damage);
             hit = true;
             boxCollider.enabled = false;
-            anim.SetTrigger("explode");
+            //anim.SetTrigger("explode");
             //GetComponent<Health>()?.TakeDamage(Damage)
         }
     }

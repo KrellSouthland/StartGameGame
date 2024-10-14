@@ -5,14 +5,13 @@ public class EnemyProjectile : EnemyDamage
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
     private float lifetime;
-    private Animator anim;
+    [SerializeField] private Animator anim;
     private BoxCollider2D coll;
 
     private bool hit;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
     }
 
@@ -40,10 +39,11 @@ public class EnemyProjectile : EnemyDamage
         base.OnTriggerEnter2D(collision); //Execute logic from parent script first
         coll.enabled = false;
 
-        if (anim != null)
+        /*if (anim != null)
             anim.SetTrigger("explode"); //When the object is a fireball explode it
-        else
-            gameObject.SetActive(false); //When this hits any object deactivate arrow
+        
+        else*/
+        gameObject.SetActive(false); //When this hits any object deactivate arrow
     }
     private void Deactivate()
     {

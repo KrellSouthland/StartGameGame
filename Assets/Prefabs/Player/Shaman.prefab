@@ -1245,7 +1245,7 @@ PrefabInstance:
     - target: {fileID: 2006466338151262852, guid: 5bdf4d4a69d227e4c8d51c78def992e5, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 5d791d481dcfc294c96fea74843e14f7, type: 3}
+      objectReference: {fileID: 21300000, guid: cf352526388e74a4f9b5749a4d288567, type: 3}
     - target: {fileID: 2006466338151262852, guid: 5bdf4d4a69d227e4c8d51c78def992e5, type: 3}
       propertyPath: effectTimer
       value: 2
@@ -1525,7 +1525,7 @@ PrefabInstance:
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: spellIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 580f7214c0eedcf4dabc057e8afe691a, type: 3}
+      objectReference: {fileID: 21300000, guid: f188d98ebd564b448b1959eabebc6883, type: 3}
     - target: {fileID: 8750279421006572754, guid: 30c3972a6f510e24b9e0bde3e2967625, type: 3}
       propertyPath: fastEffect
       value: 5
