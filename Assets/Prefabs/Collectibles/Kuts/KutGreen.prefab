@@ -14543,7 +14543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4666621003156222470
 Transform:
   m_ObjectHideFlags: 0
@@ -24236,6 +24236,7 @@ MonoBehaviour:
   - {fileID: 7475332815340340364}
   - {fileID: 1323404054547104302}
   - {fileID: 3707179484003373218}
+  audioSource: {fileID: 0}
 --- !u!95 &204094449692520754
 Animator:
   serializedVersion: 5

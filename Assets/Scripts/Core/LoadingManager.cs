@@ -9,8 +9,9 @@ public class LoadingManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        Debug.Log("dont destroy!!!!!");
+
+        
+        //animator.SetBool("FadeOut", true);
         //Keep this object even when we go to new scene
         if (instance == null)
         {
@@ -25,8 +26,12 @@ public class LoadingManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("saasdasd1!!!!!");
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject.transform.GetChild(0));
+        DontDestroyOnLoad(gameObject.transform.GetChild(0).transform.GetChild(0));
+ 
     }
       
     public void LoadCurrentLevel()

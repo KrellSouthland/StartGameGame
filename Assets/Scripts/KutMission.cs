@@ -32,13 +32,15 @@ public class KutMission : MonoBehaviour
     {
         Debug.Log("Подобрал частицу");
         kutsCollected++;
-
-        instance.UpdateKutsStats();
-        if (kutsCollected >= kutsCount)
+        if (instance != null)
         {
-            instance.kutsText.gameObject.SetActive(false);
-            Instantiate(instance.dialogTrigger, GameObject.Find("Shaman").transform.position, Quaternion.identity);
-            LevelController.instance.ActivatePortal();
+            instance.UpdateKutsStats();
+            if (kutsCollected >= kutsCount)
+            {
+                instance.kutsText.gameObject.SetActive(false);
+                Instantiate(instance.dialogTrigger, GameObject.Find("Shaman").transform.position, Quaternion.identity);
+                LevelController.instance.ActivatePortal();
+            }
         }
     }
     

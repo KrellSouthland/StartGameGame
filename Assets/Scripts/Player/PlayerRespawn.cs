@@ -49,10 +49,11 @@ public class PlayerRespawn : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             currentCheckpoint = collision.transform;
+
             //SoundManager.instance.PlaySound(checkpoint);
             collision.GetComponent<Collider2D>().enabled = false;
             collision.GetComponent<Animator>().SetTrigger("activate");
-
+            collision.GetComponent<CheckpointParticles>().ShowParticles();
             // Save checkpoint data
             GameDataManager.SaveLocationData(SceneManager.GetActiveScene().buildIndex, currentCheckpoint.name);
         }
@@ -92,6 +93,7 @@ public class PlayerRespawn : MonoBehaviour
             {
                 currentCheckpoint = checkpoints[0];
                 transform.position = currentCheckpoint.position;
+                SoundHolder.Instance.PlaySound(SoundHolder.Instance.PlayerCheckpoint);
             }
         }
     }

@@ -6,8 +6,8 @@ public class KutInterractor : MonoBehaviour
 {
     [SerializeField] private  float kutAlpha = 1f;
     bool isCollect = false;
-    [SerializeField] ParticleSystem[] ps; 
-
+    [SerializeField] ParticleSystem[] ps;
+    [SerializeField] AudioSource audioSource;
     private void Update()
     {
         if (isCollect)
@@ -36,6 +36,7 @@ public class KutInterractor : MonoBehaviour
         {
             KutMission.AddKut(); 
             isCollect = true;
+            SoundHolder.Instance.PlaySound(SoundHolder.Instance.PickUpSouls);
         }
     }
      
