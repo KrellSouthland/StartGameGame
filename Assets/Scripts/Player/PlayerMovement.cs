@@ -39,12 +39,14 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = new Quaternion (0,0,0,0);
             turnedLeft = false;
+            Debug.Log(turnedLeft);
         }
 
         if (horizontalInput < -0.01f)
         {
             transform.rotation = new Quaternion(0,180,0,0);
             turnedLeft = true;
+            Debug.Log(turnedLeft);
         }
 
         // Set animator parameters

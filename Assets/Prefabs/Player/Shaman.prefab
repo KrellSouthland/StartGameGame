@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.62, y: -2.28, z: 0}
-  m_LocalScale: {x: 0.43, y: 0.43, z: 0.43}
+  m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3442515618827797993}
@@ -228,9 +228,11 @@ MonoBehaviour:
   attackTimer: 6
   startAttack: 0
   dontAttack: 0
+  stucker: 0
   currentAttackTick: 0
   currentAttackList: 
-  betweenCoolDown: 0.5
+  betweenCoolDown: 1
+  stuckTimer: 0.55
   spells: {fileID: 3931416624099220817}
   silentSound: {fileID: 8300000, guid: 164df2458fdc8324ab297684e3ad7dcc, type: 3}
   StrongSound:

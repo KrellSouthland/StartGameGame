@@ -39,13 +39,14 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        boxCollider.enabled = false;
-        anim.SetTrigger("explode");
+        
 
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<Health>().TakeDamage(Damage);
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("explode");
             //GetComponent<Health>()?.TakeDamage(Damage)
         }
     }
@@ -66,13 +67,13 @@ public class Projectile : MonoBehaviour
 
     public virtual void Fire()
     {
-        int turnmodifier = 1;
-        if (FindObjectOfType<PlayerMovement>().turnedLeft)
+       int turnmodifier = 1;
+/*        if (FindObjectOfType<PlayerMovement>().turnedLeft)
         {
-            turnmodifier = -1;
-        }
-        transform.localScale = new Vector2(turnmodifier, transform.localScale.y);
-        rb.AddForce(transform.right*speed*turnmodifier);
+            turnmodifier = 1;
+        }*/
+        transform.localScale = new Vector2(turnmodifier*transform.localScale.x, transform.localScale.y);
+        rb.AddForce(transform.right*speed/**turnmodifier*/);
     }
 
 
