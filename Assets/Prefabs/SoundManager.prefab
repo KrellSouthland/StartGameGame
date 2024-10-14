@@ -494,6 +494,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c04dd9a32e0718e4ea337c199c3d7c90, type: 3}
   PickUpSouls:
   - {fileID: 8300000, guid: fb702a907fa3e844fbcbe85d3810a73d, type: 3}
+  PlayerCheckpoint:
+  - {fileID: 8300000, guid: 14c900b0c02600f4388b8598b00924ca, type: 3}
   EnemyHurt:
   - {fileID: 8300000, guid: ec9cadf5396a7f8499bc6c4ab9195152, type: 3}
   EnemyDie:

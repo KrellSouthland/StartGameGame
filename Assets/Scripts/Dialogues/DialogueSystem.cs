@@ -165,11 +165,12 @@ public class DialogueSystem : MonoBehaviour
 
                 if (meshIndex >= _textUI.textInfo.meshInfo.Length)
                     break;
-
+                
                 int vertexIndex = _textUI.textInfo.characterInfo[i].vertexIndex;
 
                 Color32[] vertexColors = _textUI.textInfo.meshInfo[meshIndex].colors32;
-
+                if (vertexColors == null)
+                    break;
                 if (vertexIndex + 3 >= vertexColors.Length)
                     break;
 

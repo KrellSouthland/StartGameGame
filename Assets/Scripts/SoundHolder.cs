@@ -19,7 +19,7 @@ public class SoundHolder : MonoBehaviour
     public AudioClip[] PlayerHurt;
     public AudioClip[] PlayerDie;
     public AudioClip[] PickUpSouls;
-
+    public AudioClip[] PlayerCheckpoint;
 
     [Header("Enemy Sounds")]
     public AudioClip[] EnemyHurt;
